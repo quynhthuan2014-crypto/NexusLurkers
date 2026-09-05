@@ -1,0 +1,13 @@
+{
+  "name": "nexuslurkers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NexusLurkers — original 2D arena shooter prototype for NexusVerse.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test",
+    "check": "node --check game/game-core.js && node --check client/app.js && node --check server/server.js"
+  }
+}
