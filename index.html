@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070910">
+  <title>NexusLurkers — 2D Arena</title>
+  <link rel="stylesheet" href="client/style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="launcher" class="launcher">
+      <div class="grid"></div>
+      <div class="hero">
+        <div class="brand"><span class="brand-core"></span>NEXUS<span>LURKERS</span></div>
+        <p class="tagline">FAST. PRECISE. NO MERCY.</p>
+        <p class="subtitle">An original neon 2D arena shooter built for NexusVerse.</p>
+        <div class="actions">
+          <button id="playBtn" class="primary">PLAY NOW</button>
+          <button id="howBtn">HOW TO PLAY</button>
+        </div>
+        <div class="cards">
+          <article><b>01</b><strong>COMBAT</strong><small>Five weapons, projectiles, hit feedback and pickups.</small></article>
+          <article><b>02</b><strong>TACTICS</strong><small>Cover, line-of-sight AI, strafing and arena control.</small></article>
+          <article><b>03</b><strong>PROGRESSION</strong><small>Coins, shop upgrades, streaks and score chasing.</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="game hidden">
+      <canvas id="canvas"></canvas>
+      <div class="hud top">
+        <div><span>HP</span><b id="hp">100</b></div><div><span>ARMOR</span><b id="armor">50</b></div>
+        <div><span>SCORE</span><b id="score">0</b></div><div><span>COINS</span><b id="coins">50</b></div>
+        <div><span>TIME</span><b id="time">10:00</b></div>
+      </div>
+      <div class="hud weapon">
+        <div><span id="weaponName">PULSE PISTOL</span><b id="ammo">12 / 72</b></div>
+        <div class="bar"><i id="healthBar"></i></div>
+        <div class="feed" id="feed"></div>
+      </div>
+      <div id="crosshair" class="crosshair"><i></i></div>
+      <div id="banner" class="banner hidden">ELIMINATION</div>
+      <div class="minimap"><canvas id="mini"></canvas></div>
+      <div id="shop" class="shop hidden"><header><div><b>ARMORY</b><small id="shopCoins">50 C</small></div><button id="closeShop">×</button></header><div id="shopItems" class="shop-items"></div></div>
+      <div id="mobile" class="mobile hidden"><button data-k="up">▲</button><button data-k="left">◀</button><button data-k="right">▶</button><button data-k="down">▼</button><button data-action="fire">FIRE</button><button data-action="aim">AIM</button></div>
+      <div class="bottom"><span>WASD / ARROWS MOVE</span><span>SHIFT SPRINT</span><span>LMB FIRE</span><span>RMB AIM</span><span>R RELOAD</span><span>B ARMORY</span><button id="exitBtn">EXIT</button></div>
+    </section>
+  </main>
+  <dialog id="help"><h2>HOW TO PLAY</h2><p>Move through the arena, use cover, eliminate AI targets and collect supplies. Build coins from eliminations and pickups, then press <b>B</b> to open the armory.</p><p><b>Desktop:</b> WASD/Arrow keys, mouse to aim, left click to fire, right click to aim, R to reload, B for the shop, Esc to release the cursor.</p><button id="closeHelp">GOT IT</button></dialog>
+  <script type="module" src="client/app.js"></script>
+</body>
+</html>
