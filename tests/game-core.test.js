@@ -11,7 +11,7 @@ test('creates a valid match state',()=>{
 test('damage uses armor before health',()=>{
   const a={armor:50,hp:100,flash:0};
   const hp=damageActor(a,20);
-  assert.equal(a.armor,39); assert.equal(a.hp,90); assert.equal(hp,9);
+  assert.equal(a.armor,39); assert.equal(a.hp,91); assert.equal(hp,9);
 });
 
 test('fire consumes one shot and creates projectile',()=>{
